@@ -1,0 +1,27 @@
+# docker run -it --rm -p 5002:5000 -e HOST=0.0.0.0 -e MONGODB="mongodb://localhost/cla" cla-assistant
+
+version: '3.1'
+
+services:
+
+  cla-mongo:
+    image: mongo
+    restart: always
+    container_name: cla-mongo
+    env_file:
+      - .env
+
+  cla-assistant:
+    container_name: cla-assistant
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "5002:5000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - cla-mongo
+
