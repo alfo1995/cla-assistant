@@ -20,7 +20,7 @@ Streamline your workflow and let CLA assistant handle the legal side of contribu
 
 To get started, simply store your CLA as a GitHub Gist file then link it with the repository/organisation in CLA assistant. Then sit back and relax while CLA assistant:
 
-- Comments on each opened pull request to ask the contributor to sign the CLA
+- Comments on each opened pull request to ask the contributor to sign the CLA 
 - Allows contributors to sign a CLA from within a pull request
 - Authenticates the signee with his or her GitHub account
 - Updates the status of a pull request when the contributor agrees to the CLA
